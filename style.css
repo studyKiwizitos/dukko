@@ -1,0 +1,225 @@
+/* 
+Dark Slate Gray - #1F2421 
+Naples Yellow - #F9DB6D
+Pacific Blue - #0EB1D2 (DON'T USE)
+Lavender Web - #E9E6FF
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body{
+    min-width: 320px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14pt;
+    text-align: left;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    color: #F9DB6D !important;
+}
+button{
+    width: 300px;
+    font-size: 14pt;
+    padding: 10px 15px;
+    border-radius: 1rem;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+}
+button:hover{
+    
+    background-color: #F9DB6D !important;
+}
+button:hover a{
+    color: #1F2421 !important;
+}
+
+.header{
+    position: fixed;
+    width: 100%;
+    height: 10vh;
+    background-color: #1F2421;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 9999;
+}
+.logo{
+    width: 120px;
+    color: #E9E6FF;
+    text-align: center;
+}
+.nav-links{
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+    margin-right: 20px;
+    font-size: 20px;
+}
+.nav-links li {
+    list-style-type: none;
+}
+.nav-links li a{
+    text-decoration: none;
+    color: #E9E6FF;
+}
+.burger{
+    cursor: pointer;
+    display: none;
+}
+.burger div {
+    width: 25px;
+    height: 3px;
+    margin: 5px;
+    background-color: #E9E6FF;
+}
+
+.header button{
+    cursor: pointer;
+    border: none;
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+}
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    scroll-snap-align: start;
+}
+#main video{
+    object-fit: cover;
+    width: 100%;
+    height: 100vh;
+}
+.titulo{
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    padding-left: 10px;
+    text-align: center;
+    color: #E9E6FF;
+    position: absolute;
+    z-index: 1;
+}
+.botao{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 100vh;
+    position: absolute;
+    z-index: 1;
+    top: 40%;
+    left: 50;
+}
+.botao button{
+    background-color: #E9E6FF;
+}
+#produto{
+    text-align: left;
+    padding-left: 50px;
+    font-size: 20px;
+}
+#produto .produto-texto{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+#produto img{
+    width: 60%;
+    height: 100%;
+    object-fit: cover;
+}
+#produto button{
+    background-color: #1F2421;
+}
+#produto a{
+    color: #E9E6FF;
+}
+
+#nos{
+    background-color: #1F2421;
+    color: #E9E6FF;
+}
+
+@media screen and (max-width: 768px) {
+html{
+    font-size: 50%;
+}
+body {
+    overflow-x: hidden;
+    text-align: center;
+}
+.burger {
+    display: block;
+    margin-right: 20px;
+}
+.logo{
+    width: 30%;
+}
+.nav-links {
+    position: absolute;
+    top: 8vh;
+    right: 0;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 92vh;
+    background-color: inherit;
+    margin-right: 0;
+    transform: translateX(100%);
+    transition: 0.5s;
+}
+.item {
+    display: none;
+    transform: scaleY(100%);
+    transition: 2s ease-in-out;
+}
+#produto{
+    padding: 40px;
+    flex-direction: column;
+    text-align: center !important;
+}
+#produto img{
+    width: 320px;
+    order: -1;
+}
+}
+
+.active {
+  transform: translateY(0%);
+  display: block;
+}
+
+.linha1,
+.linha2,
+.linha3 {
+  transition: 1s;
+}
+
+.nav-active {
+  transform: translateX(0%);
+}
+
+.linha1-active {
+  position: absolute;
+  transform: rotate(405deg);
+}
+.linha2-active {
+  position: absolute;
+  opacity: 0;
+}
+.linha3-active {
+  transform: rotate(135deg);
+}
